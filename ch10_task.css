@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ff9a4b;
+  width: 100%;
+  height: 50px;
+}
+
+main {
+  margin: 50px auto;
+  width: 960px;
+  display: flex;
+}
+
+/* stepごとの箱 */
+.step-container {
+  padding: 10px;
+  width: 300px;
+  background-color: #eee;
+  margin: 0 30px;
+  position: relative; /* stepの基準位置を相対位置へ変更 */
+}
+
+/* stepタグ */
+.step {
+  width: 40px;
+  height: 24px;
+  background-color: #ff9a4b;
+  font-size: 14px;
+  color: #fff;
+  position: absolute; /* .step-container の左上を基準に絶対位置で指定 */
+  /* 以下2行で .header の左上から0px移動 */
+  top: 0;
+  left: 0;
+}
+
+/* タイトル */
+h3 {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.box1 {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  background-image: url(ch9img/flow01.png);
+}
+
+.box2 {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  background-image: url(ch9img/flow02.png);
+}
+
+.box3 {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  background-image: url(ch9img/flow03.png);
+}
+
+footer {
+  background-color: #aaaaaa;
+  width: 100%;
+  height: 50px;
+}
+
+/* レスポンシブ対応（メディアクエリの宣言） */
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    /* 768px以下でmainの子要素が縦並び */
+    display: block;
+  }
+  .step-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
